@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.logo {
+  font-weight: bolder;
+  text-align: right;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+.header {
+  background-color: #d62828;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+nav.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #d62828;
+  z-index: 999;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px;
+  border-radius: 3px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #d62828;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+.hero {
+  padding: 4rem 2rem;
+  background-image: url(./images/images.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 500px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: #d62828;
+}
+.about {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-description {
+  font-size: larger;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bolder;
+}
+.section {
+  padding: 2rem;
+}
+.section h2 {
+  margin-bottom: 1rem;
+  color: #d62828;
+}
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.card-one {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  justify-content: space-between;
+}
+
+.learn-cards {
+  flex: 1 1 30%; /* allows responsiveness */
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(49, 37, 37, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.learn-cards:hover {
+  transform: scale(1.03);
+}
+.stories {
+  background-color: lightgray;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 20px;
+  gap: 10px;
+  background: #4caf50;
+  transition: transform 0.3s ease-in-out, box-shadow 0.4s ease;
+}
+
+.form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form label,
+.form input,
+.form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form input:focus,
+.form select:focus {
+  outline: 2px solid #2e7d32;
+}
+.help {
+  font-size: larger;
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: #d62828;
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: #ff6b6b;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #d62828;
+  }
+}
+
+button#submit {
+  padding: 10px 20px;
+  background-color: #d62828;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button#submit:hover {
+  animation: pulse 0.6s ease-in-out;
+}
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
+}
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
+}
